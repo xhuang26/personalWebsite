@@ -1,0 +1,332 @@
+a {
+  color: black;
+  text-decoration: none;
+  cursor: pointer; }
+
+ul {
+  padding: 0;
+  margin: 0; }
+  ul li {
+    list-style-type: none; }
+
+body, html {
+  padding: 0;
+  margin: 0; }
+  body header, html header {
+    margin: 0 10% 0 10%;
+    background-color: black;
+    height: 80px; }
+    body header .title, html header .title {
+      background-color: white;
+      text-align: center;
+      height: 80px;
+      line-height: 80px;
+      font-weight: bold; }
+      body header .title span, html header .title span {
+        display: inline-box;
+        vertical-align: center;
+        line-height: normal;
+        font-family: 'Dosis', sans-serif; }
+        @media (max-width: 644px) {
+          body header .title span, html header .title span {
+            font-size: 25px;
+            letter-spacing: 20px;
+            padding-left: 0px; } }
+        @media (min-width: 644px) and (max-width: 768px) {
+          body header .title span, html header .title span {
+            font-size: 30px;
+            letter-spacing: 20px; } }
+        @media (min-width: 768px) {
+          body header .title span, html header .title span {
+            font-size: 35px;
+            letter-spacing: 30px;
+            padding-left: 30px; } }
+    body header .nav, html header .nav {
+      height: 80px;
+      width: 50px;
+      float: right;
+      font-family: 'Dosis', sans-serif; }
+      @media (max-width: 768px) {
+        body header .nav, html header .nav {
+          display: none; } }
+      @media (min-width: 1200px) {
+        body header .nav, html header .nav {
+          display: block; } }
+      body header .nav ul, html header .nav ul {
+        padding-top: 15px; }
+        body header .nav ul li, html header .nav ul li {
+          cursor: pointer;
+          text-align: right;
+          list-style-type: none;
+          line-height: 20px;
+          font-size: 12px; }
+        body header .nav ul li::before, html header .nav ul li::before {
+          content: '';
+          position: absolute;
+          margin-top: 15px;
+          width: 0;
+          border-bottom: 1px solid black;
+          transition: 0.4s; }
+        body header .nav ul li:hover::before, html header .nav ul li:hover::before {
+          width: 10px; }
+  body .arrow_index, html .arrow_index {
+    position: absolute;
+    right: 15%; }
+    body .arrow_index .hoveringArrow, html .arrow_index .hoveringArrow {
+      position: absolute;
+      content: url("./img/hoveringArrow.png"); }
+    body .arrow_index .indexingArrow, html .arrow_index .indexingArrow {
+      position: absolute; }
+    body .arrow_index .arrow, html .arrow_index .arrow {
+      width: 35px;
+      cursor: pointer; }
+  body .intro, html .intro {
+    height: auto;
+    margin: 0 10%;
+    display: flex; }
+    @media (max-width: 644px) {
+      body .intro, html .intro {
+        flex-direction: column; } }
+    @media (min-width: 644px) and (max-width: 768px) {
+      body .intro, html .intro {
+        flex-direction: column; } }
+    @media (min-width: 768px) {
+      body .intro, html .intro {
+        flex-direction: row; } }
+    body .intro .my_objects, html .intro .my_objects {
+      height: inherited; }
+      body .intro .my_objects .col, html .intro .my_objects .col {
+        position: relative; }
+      @media (max-width: 644px) {
+        body .intro .my_objects, html .intro .my_objects {
+          display: flex;
+          flex-direction: column;
+          width: 100%; }
+          body .intro .my_objects .col, html .intro .my_objects .col {
+            display: none; } }
+      @media (min-width: 644px) and (max-width: 768px) {
+        body .intro .my_objects, html .intro .my_objects {
+          width: 100%;
+          display: flex;
+          flex-direction: row; }
+          body .intro .my_objects .col, html .intro .my_objects .col {
+            display: none; } }
+      @media (min-width: 768px) {
+        body .intro .my_objects, html .intro .my_objects {
+          width: 30%;
+          display: flex;
+          flex-direction: column; }
+          body .intro .my_objects .col, html .intro .my_objects .col {
+            margin: 12% 5% 0 0;
+            height: auto; }
+          body .intro .my_objects .pic, html .intro .my_objects .pic {
+            width: 90%; }
+          body .intro .my_objects .text, html .intro .my_objects .text {
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.3);
+            color: #fcd9d9;
+            top: 0;
+            text-align: center;
+            width: 90%;
+            opacity: 0;
+            font-family: 'Dosis', sans-serif;
+            font-size: 20px; } }
+    @media (max-width: 768px) {
+      body .intro .microwave, html .intro .microwave {
+        width: 100%; } }
+    @media (min-width: 768px) {
+      body .intro .microwave, html .intro .microwave {
+        width: 70%; } }
+    @media (max-width: 768px) {
+      body .intro .microwave img, html .intro .microwave img {
+        width: 100%;
+        height: 300px; } }
+    @media (min-width: 768px) {
+      body .intro .microwave img, html .intro .microwave img {
+        width: 100%;
+        padding: 5% 0 5% 0; } }
+  body .aboutme, html .aboutme {
+    height: auto;
+    margin: 0 10%;
+    display: flex; }
+    @media (max-width: 644px) {
+      body .aboutme, html .aboutme {
+        flex-direction: column; }
+        body .aboutme .col, html .aboutme .col {
+          background-color: white;
+          width: 96%;
+          margin-left: 2%; }
+        body .aboutme .link, html .aboutme .link {
+          margin-left: 0px; }
+        body .aboutme .large, html .aboutme .large {
+          display: none; }
+        body .aboutme .small, html .aboutme .small {
+          display: block; }
+        body .aboutme .content, html .aboutme .content {
+          max-width: 100%; } }
+    @media (min-width: 644px) and (max-width: 768px) {
+      body .aboutme, html .aboutme {
+        margin-top: 20px;
+        flex-direction: row;
+        flex-wrap: wrap; }
+        body .aboutme .col, html .aboutme .col {
+          background-color: white;
+          width: 43%;
+          padding-right: 4%; }
+        body .aboutme .general, html .aboutme .general {
+          padding-right: 20px;
+          padding-left: 20px; }
+        body .aboutme .link, html .aboutme .link {
+          width: 100%; }
+        body .aboutme .large, html .aboutme .large {
+          display: none; }
+        body .aboutme .small, html .aboutme .small {
+          display: block; }
+        body .aboutme .content, html .aboutme .content {
+          max-width: 170px; } }
+    @media (min-width: 768px) {
+      body .aboutme, html .aboutme {
+        margin-top: 70px;
+        flex-direction: row; }
+        body .aboutme .col, html .aboutme .col {
+          background-color: white;
+          width: 28%;
+          padding-right: 4%; }
+        body .aboutme .general, html .aboutme .general {
+          padding-left: 10%; }
+        body .aboutme .large, html .aboutme .large {
+          display: block; }
+        body .aboutme .small, html .aboutme .small {
+          display: none; }
+        body .aboutme .content, html .aboutme .content {
+          max-width: 180px; } }
+    body .aboutme h2, html .aboutme h2 {
+      font-family: 'Dosis', sans-serif;
+      position: relative;
+      margin-bottom: 10px;
+      font-size: 23px; }
+    body .aboutme h2::after, html .aboutme h2::after {
+      content: '+';
+      font-size: 30px;
+      position: absolute;
+      font-weight: bold;
+      font-family: 'Dosis', sans-serif; }
+    body .aboutme article h3, html .aboutme article h3 {
+      font-family: 'Dosis', sans-serif;
+      margin-bottom: 5px; }
+      body .aboutme article h3 .index, html .aboutme article h3 .index {
+        background-color: #2a3ea4;
+        padding: 0 0px 0 5px;
+        margin-right: 3px;
+        color: white;
+        letter-spacing: 3px;
+        font-size: 15px; }
+      body .aboutme article h3 .indexPink, html .aboutme article h3 .indexPink {
+        background-color: #fcd9d9;
+        padding: 0 0px 0 5px;
+        margin-right: 3px;
+        color: white;
+        letter-spacing: 3px;
+        font-size: 15px; }
+    body .aboutme article .content, html .aboutme article .content {
+      font-family: 'Abel', sans-serif; }
+      body .aboutme article .content ul, html .aboutme article .content ul {
+        padding-left: 5px; }
+        body .aboutme article .content ul li:before, html .aboutme article .content ul li:before {
+          content: '*';
+          font-size: 20px;
+          font-family: 'Dosis', sans-serif;
+          position: relative;
+          top: 5px;
+          padding-right: 5px; }
+        body .aboutme article .content ul .linkLi:before, html .aboutme article .content ul .linkLi:before {
+          content: ""; }
+      body .aboutme article .content .fishVideo, html .aboutme article .content .fishVideo {
+        padding-top: 10px;
+        width: 100%;
+        height: 260px;
+        max-height: 260px; }
+    body .aboutme .skills .contact, html .aboutme .skills .contact {
+      min-width: 200px; }
+  body .projects, html .projects {
+    height: 400px;
+    margin: 0 10%; }
+    body .projects .title, html .projects .title {
+      text-align: center;
+      height: 100px;
+      line-height: 100px;
+      padding-bottom: 30px;
+      padding-top: 70px; }
+      body .projects .title span, html .projects .title span {
+        font-family: 'Dosis', sans-serif;
+        background-color: white;
+        display: inline-box;
+        vertical-align: bottom;
+        line-height: normal; }
+        @media (max-width: 644px) {
+          body .projects .title span, html .projects .title span {
+            font-size: 20px;
+            letter-spacing: 10px; } }
+        @media (min-width: 644px) and (max-width: 768px) {
+          body .projects .title span, html .projects .title span {
+            font-size: 30px;
+            letter-spacing: 15px; } }
+        @media (min-width: 768px) {
+          body .projects .title span, html .projects .title span {
+            font-size: 36px;
+            padding-left: 30px;
+            letter-spacing: 30px; } }
+    body .projects .display, html .projects .display {
+      width: inherited;
+      height: 350px;
+      padding-bottom: 100px;
+      display: flex;
+      flex-direction: row; }
+      @media (max-width: 768px) {
+        body .projects .display .info, html .projects .display .info {
+          display: none; } }
+      @media (min-width: 768px) {
+        body .projects .display .info, html .projects .display .info {
+          width: 20%; } }
+      body .projects .display .info .time, html .projects .display .info .time {
+        text-align: left;
+        padding-top: 250px; }
+        body .projects .display .info .time h4, html .projects .display .info .time h4 {
+          font-size: 25px;
+          font-weight: 100;
+          font-family: 'Dosis', sans-serif;
+          margin: 0; }
+        body .projects .display .info .time .month, html .projects .display .info .time .month {
+          display: inline-block;
+          min-width: 85px;
+          text-align: left;
+          color: #e8d86e; }
+      body .projects .display .info .project_name, html .projects .display .info .project_name {
+        font-family: 'Dosis', sans-serif;
+        padding-top: 30px;
+        font-size: 20px; }
+      body .projects .display .project_image, html .projects .display .project_image {
+        background-color: pink;
+        height: 80%; }
+        @media (max-width: 768px) {
+          body .projects .display .project_image, html .projects .display .project_image {
+            width: 100%;
+            margin-top: 20px; } }
+        @media (min-width: 768px) {
+          body .projects .display .project_image, html .projects .display .project_image {
+            width: 80%;
+            margin-top: 50px; } }
+        body .projects .display .project_image article, html .projects .display .project_image article {
+          background-repeat: no-repeat;
+          background-size: 80% 100%;
+          height: inherit;
+          position: absolute;
+          z-index: 0;
+          width: inherit;
+          margin-bottom: 70px; }
+        body .projects .display .project_image .previous, html .projects .display .project_image .previous {
+          z-index: 1; }
+        body .projects .display .project_image .current, html .projects .display .project_image .current {
+          z-index: 2; }
+
+/*# sourceMappingURL=index.css.map */
