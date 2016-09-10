@@ -17,7 +17,7 @@ $(window).load(function(){
 const projects = ['./img/mp1_1.png', './img/mp1_2.png', './img/mp1_3.png', "./img/mp2_1.png", "./img/mp2_2.png", "./img/mp2_3.png", "./img/mp2_4.png", "./img/mp4_1.png", "./img/mp4_3.png", "./img/mp4_4.png", "./img/mp4_5.png"];
 const months = ["February", "March", "May"];
 const proj_names = ["Movie Gallery", "Personal Website", "Team Task Manager"];
-let cur_i = 0;
+var cur_i = 0;
 
 const setBackground = function(_articles){
     
@@ -31,9 +31,9 @@ const setBackground = function(_articles){
       console.warn('invalid size of projects!');
     }
     $(".project_image article").each(function(index){
-      let url = "url("+projects[index]+")";
+      var url = "url("+projects[index]+")";
       $(this).css("background-image", url);
-      let name = projects[index].split('_')[0].slice(-3);
+      var name = projects[index].split('_')[0].slice(-3);
       console.log(name);
       $(this).attr('proj', name);
       console.log(projects[index]);
@@ -45,11 +45,11 @@ const setBackground = function(_articles){
 
 function hoverLink(){
   $(".linkLi").mouseenter(function(){
-    let elem = $(this).children("i");
+    var elem = $(this).children("i");
    elem.addClass("fa-spin");
   });
   $(".linkLi").mouseleave(function(){
-    let elem = $(this).children("i");
+    var elem = $(this).children("i");
    elem.removeClass("fa-spin");
   })
 }
@@ -109,7 +109,7 @@ function clickArrow(){
   const arrow_index_height = 164;
   const marginTop = 30;
   arrow_section.click(function(){
-    let threshold = getThreshould(marginTop, ".aboutme");
+    var threshold = getThreshould(marginTop, ".aboutme");
    $('html,body').animate({scrollTop: $(".projects").position().top}, 'slow', function(){
      console.log("arrow moved!");
      $scrollingDiv
@@ -122,9 +122,9 @@ function clickArrow(){
 
 function fishVideoReplay(){
   $(".fishVideo").on("ended", function(){
-    let marginTop = getMarginTop();
-    let videoPlayingThreshould = $(".aboutme").position().top;
-    let arrowMovingThreshold = getThreshould(marginTop, ".aboutme");
+    var marginTop = getMarginTop();
+    var videoPlayingThreshould = $(".aboutme").position().top;
+    var arrowMovingThreshold = getThreshould(marginTop, ".aboutme");
     console.log("video ended");
     if($(window).scrollTop() > videoPlayingThreshould && $(window).scrollTop() < arrowMovingThreshold){
       $(".fishVideo").get(0).play();
@@ -133,13 +133,13 @@ function fishVideoReplay(){
 }
 
 function windowResize(){
-  let clockHeight = $(".my_objects .clock .pic").height();
+  var clockHeight = $(".my_objects .clock .pic").height();
   $(".my_objects .plant .pic").css("height", clockHeight);
-  let plantMargin = $(".my_objects .plant").css("margin-top").slice(0, -2);
+  var plantMargin = $(".my_objects .plant").css("margin-top").slice(0, -2);
   
   console.log(clockHeight*2+Math.ceil(plantMargin));
   if(clockHeight !== 0){
-    let new_height = clockHeight*2+Math.ceil(plantMargin);
+    var new_height = clockHeight*2+Math.ceil(plantMargin);
       
     $(".microwave img").css("height", new_height);
     $(".intro").css("height", new_height);
@@ -152,11 +152,11 @@ function windowResize(){
   
   
   $(window).resize(function(){
-    let clockHeight = $(".my_objects .clock .pic").height();
+    var clockHeight = $(".my_objects .clock .pic").height();
     $(".my_objects .plant .pic").css("height", clockHeight);
-    let plantMargin = $(".my_objects .plant").css("margin-top").slice(0, -2);
+    var plantMargin = $(".my_objects .plant").css("margin-top").slice(0, -2);
     if(clockHeight !== 0){
-      let new_height = clockHeight*2+Math.ceil(plantMargin);
+      var new_height = clockHeight*2+Math.ceil(plantMargin);
       $(".microwave img").css("height", new_height);
       $(".intro").css("height", new_height);
       $(".my_objects .col .text").css("height", clockHeight/2);
@@ -177,7 +177,7 @@ function windowResize(){
 }
 
 function getMarginTop(){
-  let marginTop = 30;
+  var marginTop = 30;
   if($(window).scrollTop() == 0){
       marginTop = 0;
     } else {
@@ -193,16 +193,16 @@ function scrollEvent(){
   const $scrollingDiv = $(".arrow_index");
   const $microwave = $(".microwave img");
   const microwaveSrc = $microwave.attr('src');
-  let marginTop = getMarginTop();
-  let arrowMovingThreshold = getThreshould(marginTop, ".aboutme");
-  let introVideoThreshould = getThreshould(70, ".intro");
+  var marginTop = getMarginTop();
+  var arrowMovingThreshold = getThreshould(marginTop, ".aboutme");
+  var introVideoThreshould = getThreshould(70, ".intro");
   if($(window).scrollTop() < arrowMovingThreshold){
       $scrollingDiv
 		.stop()
 		.animate({"marginTop": ($(window).scrollTop() + marginTop) + "px"}, {duration:1600,easing:"swing"})
   }
   
-  let scrollTop = $(window).scrollTop();
+  var scrollTop = $(window).scrollTop();
     if(scrollTop < arrowMovingThreshold){  
       if($microwave.attr('src') != microwaveSrc && scrollTop >= introVideoThreshould){
         $microwave.attr('src', microwaveSrc); 
@@ -228,7 +228,7 @@ function scrollEvent(){
 		.animate({"marginTop": ($(window).scrollTop() + marginTop) + "px"}, {duration:1600,easing:"swing"});			
     }
     
-    let videoPlayingThreshould = $(".aboutme").position().top;
+    var videoPlayingThreshould = $(".aboutme").position().top;
     if(!$(".fishVideo").get(0).play() && $(window).scrollTop() > videoPlayingThreshould && $(window).scrollTop() < arrowMovingThreshold){
       $(".fishVideo").get(0).play();
     }
@@ -236,10 +236,10 @@ function scrollEvent(){
 }
 
 function rotateImages(){
-  let curPhoto = $(".project_image .current");
-  let curProj = $(".project_image .current").attr('proj');
-  let nxtPhoto = curPhoto.next();
-  let nxtProj = curPhoto.next().attr('proj');
+  var curPhoto = $(".project_image .current");
+  var curProj = $(".project_image .current").attr('proj');
+  var nxtPhoto = curPhoto.next();
+  var nxtProj = curPhoto.next().attr('proj');
   if(nxtPhoto.length == 0){
     nxtPhoto = $(".project_image article:first"); 
   }
