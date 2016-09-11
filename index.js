@@ -13,8 +13,8 @@ $(window).load(function(){
   fishVideoReplay();
   
   hoverLink();
-  hoverVideos(".clock .pic", ".clock .text", true);
-  hoverVideos(".plant", ".plant .text", false);
+  hoverPics(".clock", ".clock .text", true);
+  hoverPics(".plant", ".plant .text", false);
   clickNav(".workNav", ".projects");
   clickNav(".aboutmeNav", ".aboutme");
 });
@@ -55,17 +55,18 @@ function hoverLink(){
   })
 }
 
-function hoverVideos(className, textName, isVideo){
+function hoverPics(className, textName, isGif){
   const video = $(className);
   const text = $(textName);
-  if(isVideo){
+  if(isGif){
+    const src = $(".clock .pic").attr('src');
     video.mouseenter(function(){
+      $(".clock .pic").attr('src', src.replace('_static.gif', '.gif'));
       text.animate({"opacity": 1}, {duration:300,easing:"swing"});
-      video.get(0).play();
     });
     video.mouseleave(function(){
       text.animate({"opacity": 0}, {duration:300,easing:"swing"});
-      video.get(0).pause();
+      $(".clock .pic").attr('src', src);
     });
   } else {
     video.mouseenter(function(){
