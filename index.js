@@ -1,15 +1,16 @@
 const arrow_index_height = 164;
 $(window).load(function(){
   const _articles = $(".project_image article");
+  windowResize();
   setBackground(_articles);
   setInterval(rotateImages, 4000);
   hoveringArrow();
   scrollEvent();
   clickArrow();
   fishVideoReplay();
-  windowResize();
+  
   hoverLink();
-  hoverVideos(".clock", ".clock .text", true);
+  hoverVideos(".clock .pic", ".clock .text", true);
   hoverVideos(".plant", ".plant .text", false);
   clickNav(".workNav", ".projects");
   clickNav(".aboutmeNav", ".aboutme");
