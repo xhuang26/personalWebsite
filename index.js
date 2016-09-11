@@ -139,8 +139,8 @@ function changeIntroElemSize() {
 
       $(".microwave img").css("height", new_height);
       $(".intro").css("height", new_height);
-      $(".my_objects .col .text").css("height", clockHeight/2);
-      $(".my_objects .col .text").css("padding-top", clockHeight/2);
+      $(".my_objects .col .text").css("height", plantHeight/2);
+      $(".my_objects .col .text").css("padding-top", plantHeight/2);
     } else if($(".intro").css("height") !== 300){
       $(".intro").css("height", 300);
       $(".microwave img").css("height", 300);
