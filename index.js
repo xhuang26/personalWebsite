@@ -126,7 +126,7 @@ function fishVideoReplay(){
   });
 }
 function changeIntroElemSize() {
-  $(".my_objects .clock .pic").on("loadedmetadata", function(){
+  $(".my_objects .clock .pic").on("loadeddata", function(){
     var clockHeight = $(".my_objects .clock .pic").height();
     $(".my_objects .plant .pic").css("height", clockHeight);
     var plantMargin = $(".my_objects .plant").css("margin-top").slice(0, -2);
