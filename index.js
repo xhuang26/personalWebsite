@@ -129,7 +129,7 @@ function changeIntroElemSize() {
   /*$(".my_objects .clock .pic").on("canplay", function(){*/
     var plantHeight = $(".my_objects .plant .pic").height();
     console.log($(".my_objects .plant .pic").css("height"));
-    $(".my_objects .clock .pic").css("height", clockHeight);
+    $(".my_objects .clock .pic").css("height", plantHeight);
     var plantMargin = $(".my_objects .plant").css("margin-top").slice(0, -2);
 
     console.log("plantHeight", plantHeight);
