@@ -126,10 +126,12 @@ function windowResize(){
   var clockHeight = $(".my_objects .clock .pic").height();
   $(".my_objects .plant .pic").css("height", clockHeight);
   var plantMargin = $(".my_objects .plant").css("margin-top").slice(0, -2);
+
   console.info("clockHeight", clockHeight);
   if(clockHeight !== 0){
     var new_height = clockHeight*2+Math.ceil(plantMargin); 
     console.info("newHeight", newHeight);
+
     $(".microwave img").css("height", new_height);
     $(".intro").css("height", new_height);
     $(".my_objects .col .text").css("height", clockHeight/2);
