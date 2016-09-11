@@ -130,7 +130,7 @@ function windowResize(){
   console.info("clockHeight", clockHeight);
   if(clockHeight !== 0){
     var new_height = clockHeight*2+Math.ceil(plantMargin); 
-    console.info("newHeight", newHeight);
+    console.info("newHeight", new_height);
 
     $(".microwave img").css("height", new_height);
     $(".intro").css("height", new_height);
