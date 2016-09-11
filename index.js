@@ -130,6 +130,7 @@ function changeIntroElemSize() {
   videoElement = $video[0];
   /*$(".my_objects .clock .pic").on("canplay", function(){*/
     var clockHeight = $(".my_objects .clock .pic").height();
+    console.log($(".my_objects .plant .pic").css("height"));
     $(".my_objects .plant .pic").css("height", clockHeight);
     var plantMargin = $(".my_objects .plant").css("margin-top").slice(0, -2);
 
