@@ -14,7 +14,6 @@ body, html {
   margin: 0; }
   body header, html header {
     margin: 0 10% 0 10%;
-    background-color: black;
     height: 80px; }
     body header .title, html header .title {
       background-color: white;
