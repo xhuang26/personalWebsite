@@ -126,15 +126,17 @@ function fishVideoReplay(){
   });
 }
 function changeIntroElemSize() {
-  $(".my_objects .clock .pic").on("loadeddata", function(){
+  $video = $(".my_objects .clock .pic");
+  videoElement = $video[0];
+  /*$(".my_objects .clock .pic").on("canplay", function(){*/
     var clockHeight = $(".my_objects .clock .pic").height();
     $(".my_objects .plant .pic").css("height", clockHeight);
     var plantMargin = $(".my_objects .plant").css("margin-top").slice(0, -2);
 
-    console.info("clockHeight", clockHeight);
+    console.log("clockHeight", clockHeight);
     if(clockHeight !== 0){
       var new_height = clockHeight*2+Math.ceil(plantMargin); 
-      console.info("newHeight", new_height);
+      console.log("newHeight", new_height);
 
       $(".microwave img").css("height", new_height);
       $(".intro").css("height", new_height);
@@ -144,7 +146,7 @@ function changeIntroElemSize() {
       $(".intro").css("height", 300);
       $(".microwave img").css("height", 300);
     }
-  });
+  //});
 }
 function windowResize(){
 
