@@ -60,13 +60,12 @@ function hoverVideos(className, textName, isVideo){
   const text = $(textName);
   if(isVideo){
     video.mouseenter(function(){
-      video.get(0).play();
       text.animate({"opacity": 1}, {duration:300,easing:"swing"});
-
+      video.get(0).play();
     });
     video.mouseleave(function(){
-      video.get(0).pause();
       text.animate({"opacity": 0}, {duration:300,easing:"swing"});
+      video.get(0).pause();
     });
   } else {
     video.mouseenter(function(){
