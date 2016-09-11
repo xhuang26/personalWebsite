@@ -126,17 +126,15 @@ function fishVideoReplay(){
   });
 }
 function changeIntroElemSize() {
-  $video = $(".my_objects .clock .pic");
-  videoElement = $video[0];
   /*$(".my_objects .clock .pic").on("canplay", function(){*/
-    var clockHeight = $(".my_objects .clock .pic").height();
+    var plantHeight = $(".my_objects .plant .pic").height();
     console.log($(".my_objects .plant .pic").css("height"));
-    $(".my_objects .plant .pic").css("height", clockHeight);
+    $(".my_objects .clock .pic").css("height", clockHeight);
     var plantMargin = $(".my_objects .plant").css("margin-top").slice(0, -2);
 
-    console.log("clockHeight", clockHeight);
-    if(clockHeight !== 0){
-      var new_height = clockHeight*2+Math.ceil(plantMargin); 
+    console.log("plantHeight", plantHeight);
+    if(plantHeight !== 0){
+      var new_height = plantHeight*2+Math.ceil(plantMargin); 
       console.log("newHeight", new_height);
 
       $(".microwave img").css("height", new_height);
