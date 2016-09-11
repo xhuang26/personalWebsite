@@ -9,7 +9,7 @@ $(window).load(function(){
   fishVideoReplay();
   windowResize();
   hoverLink();
-  hoverVideos(".clock .pic", ".clock .text", true);
+  hoverVideos(".clock", ".clock .text", true);
   hoverVideos(".plant", ".plant .text", false);
   clickNav(".workNav", ".projects");
   clickNav(".aboutmeNav", ".aboutme");
